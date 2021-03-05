@@ -1,14 +1,14 @@
 var map;
-var coords = {
+
+var coordenadas = {
     lat:0,
-    long:0
+    lng:0
 };
 
 var propiedades = {
-    center: coords,
+    center: coordenadas,
     zoom: 20
 };
-
 function iniciaMapa() {
 
     map = new google.maps.Map(document.getElementById("map"), propiedades);

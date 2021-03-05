@@ -9,42 +9,47 @@ var propiedades = {
     zoom: 20
 };
 
-function iniciaMapa(){
-    map =new google.maps.Map(document.getElementById("map"), propiedades);
+function iniciaMapa() {
+
+    map = new google.maps.Map(document.getElementById("map"), propiedades);
 
     var icono = {
-        url: "https://media2.giphy.com/media/omHPYZttAVAAw/giphy.gif",
+        url: "https://media2.giphy.com/media/omHPYZttAVAAw/giphy.gif", 
         scaledSize: new google.maps.Size(50,50),
         origin: new google.maps.Point(0,0),
         anchor: new google.maps.Point(0,0)
     }
 
     var marker = new google.maps.Marker({
-        position: coords,
+        position: coordenadas,
         icon: icono,
         map: map
     });
 
     if(navigator.geolocation){
 
-        setInterval(function(){
-            
-        movePosition(marker);
-
+        setInterval( ()=> {
+           moverPosicion(marker);
+           console.log("Mueve posición");
         },5000);
+        
+
     }
 
-    function movePosition(marker){
-        navigator.geolocation.getCurrentPosition(position =>{
+    function moverPosicion(marker){
+
+        navigator.geolocation.getCurrentPosition( posicion => {
             var pos = {
-                lat: position.coords.latitude,
-                long: position.coords.longitude
+                lat: posicion.coords.latitude,
+                lng: posicion.coords.longitude
             }
+
             marker.setPosition(pos);
-            
             map.panTo(pos);
-            map.setCener(pos);
+            map.setCenter(pos);
+
         });
 
     }
-};
+
+}

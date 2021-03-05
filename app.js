@@ -9,7 +9,7 @@ var propiedades = {
     zoom: 20
 };
 
-function iniciarMapa(){
+function iniciaMapa(){
     map =new google.maps.Map(document.getElementById("map"), propiedades);
 
     var icono = {

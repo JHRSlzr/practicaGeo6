@@ -9,6 +9,7 @@ var propiedades = {
     center: coordenadas,
     zoom: 20
 };
+
 function iniciaMapa() {
 
     map = new google.maps.Map(document.getElementById("map"), propiedades);

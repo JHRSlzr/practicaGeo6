@@ -15,7 +15,7 @@ function iniciaMapa() {
     map = new google.maps.Map(document.getElementById("map"), propiedades);
 
     var icono = {
-        url: "https://media.giphy.com/media/1ZweHMlSaxcc32mSSu/giphy.gif", 
+        url: "https://giphy.com/gifs/omHPYZttAVAAw/html5", 
         scaledSize: new google.maps.Size(50,50),
         origin: new google.maps.Point(0,0),
         anchor: new google.maps.Point(0,0)

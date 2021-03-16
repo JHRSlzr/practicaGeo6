@@ -31,7 +31,7 @@ function getMarkers() {
 }
 
 var iniciaMapa = () => {
-    const map = new google.maps.Map(document.getElementById("map"), propiedades);
+    const map = new google.maps.Map(document.getElementById("mapa"), propiedades);
 
     const marcadores = getMarkers();
 

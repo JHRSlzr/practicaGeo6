@@ -14,7 +14,7 @@ fetch("https://corona.lmao.ninja/v3/covid-19/countries").then(function (response
 
             let nombre = document.createElement("p");
             nombre.textContent =
-                "PAÍS: " + registro.country + " - CASOS: " + registro.cases;
+                "<strong>PAÍS: </strong>" + registro.country + " <strong>CASOS: </strong>" + registro.cases;
             column.appendChild(nombre);
         });
     });

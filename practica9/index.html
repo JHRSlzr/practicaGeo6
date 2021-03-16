@@ -5,16 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>PRACTICA 9</title>
+    <title>Practica 9</title>
+    <style>
+        #map {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="map"></div>
 
-    <div id='mapa'>
-
-    </div>
-    <script src="App.js"></script>
+    <script src="./main.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCklgR88CgKokH7bIKeOy1EVmVVHuq4tXo&callback=iniciaMapa"
         async defer></script>

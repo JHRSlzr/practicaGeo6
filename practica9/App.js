@@ -30,16 +30,17 @@ var coords = {
     return markers;
   }
   
-  var iniciaMapa = () => {
-    const map = new google.maps.Map(document.getElementById("map"), propiedades);
+  function iniciaMapa() {
+    const mapa = new google.maps.Map(document.getElementById('map'), propiedades);
+    
+    const marcadores = obtenerMarcadores();
   
-    const marcadores = getMarkers();
   
-    for (marcador of marcadores) {
+    for(marcador of marcadores){
       let marker = new google.maps.Marker({
-        map: map,
+        map: mapa,
         position: new google.maps.LatLng(marcador.latitude, marcador.longitude),
         title: marcador.name,
       });
     }
-  };
+  }
